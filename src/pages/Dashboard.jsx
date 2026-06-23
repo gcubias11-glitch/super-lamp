@@ -134,7 +134,7 @@ export default function Dashboard() {
     { label: 'Subscribers', value: formatCompact(data.stats.subscribers), change: 'Real data', up: true, icon: Users },
     { label: 'Total Views', value: formatCompact(data.stats.totalViews), change: 'All time', up: true, icon: Eye },
     { label: 'Videos', value: formatCompact(data.stats.totalVideos), change: 'Uploaded', up: true, icon: ChartIcon },
-    { label: 'Channel', value: data.channel.title.length > 12 ? data.channel.title.slice(0, 12) + '...' : data.channel.title, change: data.channel.customUrl || '', up: true, icon: Youtube },
+    { label: 'Channel', value: data.channel.title.length > 12 ? data.channel.title.slice(0, 12) + '...' : data.channel.title, change: data.channel.customUrl || '', up: true, icon: Video },
   ] : MOCK_KPI;
 
   const categories = data && data.recentVideos.length > 0
