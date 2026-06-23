@@ -190,9 +190,29 @@ export default function LandingPage() {
                     </li>
                   ))}
                 </ul>
-                <Link to="/signup" className={`w-full ${tier.popular ? 'btn-primary' : 'btn-secondary'} text-center block`}>
-                  {tier.name === 'Free' ? 'Get Started' : 'Subscribe'}
-                </Link>
+                {tier.name === 'Free' ? (
+                  <Link to="/signup" className="w-full btn-secondary text-center block">
+                    Get Started
+                  </Link>
+                ) : tier.name === 'Pro' ? (
+                  <a
+                    href="https://buy.stripe.com/cNi3cvaMl19b4dn1JOfEk00"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full btn-primary text-center block"
+                  >
+                    Subscribe
+                  </a>
+                ) : (
+                  <a
+                    href="https://buy.stripe.com/aFadR97A9g45fW5dswfEk01"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full btn-secondary text-center block"
+                  >
+                    Subscribe
+                  </a>
+                )}
               </div>
             ))}
           </div>
