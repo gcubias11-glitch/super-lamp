@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { BarChart3, Search, TrendingUp, Users, Zap, Target } from 'lucide-react';
-import logo from '../assets/audiencelens-logo.png';
+import logo from '../../assets/audiencelens-logo.png';
 
 export default function Navbar() {
   return (
