@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+/* Brand Design System — AudienceLens */
+@theme {
+  --color-brand-navy: #1A2332;
+  --color-brand-teal: #00D4AA;
+  --color-brand-teal-light: #E6FCF5;
+  --color-neutral-100: #FFFFFF;
+  --color-neutral-200: #F7F8FA;
+  --color-neutral-300: #E2E5EA;
+  --color-neutral-500: #8896A6;
+  --color-neutral-700: #4A5568;
+  --color-neutral-900: #1A202C;
+  --color-chart-blue: #3B82F6;
+  --color-chart-purple: #8B5CF6;
+  --color-chart-orange: #F97316;
+  --color-chart-pink: #EC4899;
+  --color-chart-green: #10B981;
+  --color-success: #10B981;
+  --color-warning: #F59E0B;
+  --color-error: #EF4444;
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+}
+
+/* Inter font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+/* Base layer */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply font-sans text-neutral-700 antialiased;
+    background-color: #FFFFFF;
+  }
+}
+
+/* Custom utility classes */
+@layer components {
+  .btn-primary {
+    @apply bg-brand-teal text-white font-semibold px-6 py-3 rounded-lg 
+           hover:bg-[#00BFA0] transition-all duration-200 
+           cursor-pointer inline-flex items-center justify-center;
+  }
+  .btn-secondary {
+    @apply bg-transparent text-brand-navy border border-neutral-300 font-semibold 
+           px-6 py-3 rounded-lg hover:bg-neutral-200 transition-all duration-200 
+           cursor-pointer inline-flex items-center justify-center;
+  }
+  .btn-ghost {
+    @apply bg-transparent text-neutral-700 px-6 py-3 rounded-lg 
+           hover:bg-neutral-200 transition-all duration-200 
+           cursor-pointer inline-flex items-center justify-center;
+  }
+  .btn-sm {
+    @apply px-4 py-2 text-sm;
+  }
+  .card {
+    @apply bg-white border border-neutral-300 rounded-xl p-6;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+  }
+  .card-hover {
+    @apply transition-all duration-200;
+  }
+  .card-hover:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transform: translateY(-2px);
+  }
+}
