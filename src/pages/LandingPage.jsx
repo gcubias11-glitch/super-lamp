@@ -21,7 +21,7 @@ export default function LandingPage() {
                 Stop guessing. AudienceLens analyzes viewer behavior to show you exactly what content to make next.
               </p>
               <div className="flex flex-wrap gap-4">
-                <Link to="/signup" className="btn-primary text-lg px-8 py-4">
+                <Link to="/dashboard" className="btn-primary text-lg px-8 py-4">
                   Start Free Trial <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
                 <button className="btn-secondary text-lg px-8 py-4 !text-white !border-neutral-500 hover:!bg-white/10">
@@ -191,7 +191,7 @@ export default function LandingPage() {
                   ))}
                 </ul>
                 {tier.name === 'Free' ? (
-                  <Link to="/signup" className="w-full btn-secondary text-center block">
+                  <Link to="/dashboard" className="w-full btn-secondary text-center block">
                     Get Started
                   </Link>
                 ) : tier.name === 'Pro' ? (
@@ -258,8 +258,8 @@ export default function LandingPage() {
           <p className="text-white/80 text-lg mb-8 max-w-lg mx-auto">
             Join thousands of creators who use data to drive their content strategy.
           </p>
-          <Link to="/signup" className="inline-flex items-center gap-2 bg-white text-brand-teal font-semibold px-8 py-4 rounded-lg hover:bg-neutral-100 transition-all duration-200 text-lg">
-            Get Started Free <ArrowRight className="h-5 w-5" />
+          <Link to="/dashboard" className="inline-flex items-center gap-2 bg-white text-brand-teal font-semibold px-8 py-4 rounded-lg hover:bg-neutral-100 transition-all duration-200 text-lg">
+                    Get Started Free <ArrowRight className="h-5 w-5" />
           </Link>
         </div>
       </section>
